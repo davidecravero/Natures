@@ -20,10 +20,14 @@ body {
   font-size: 16pz;
   line-height: 1.7;
   color: #777;
+  padding: 30px;
 }
 
 .header {
   height: 95vh; /* is the 96 % */
-  background-image: url(/Users/Davide/Dev/Natures/img/hero.jpg);
+  background-image: linear-gradient(to right bottom, #7ed56fba, #28b485d2),
+    url(/Users/Davide/Dev/Natures/img/hero.jpg);
   background-size: cover;
+  background-position: top;
+  clip-path: polygon(x, y); /* create polygon, forms inside on the image */
 }
