@@ -21,3 +21,9 @@ body {
   line-height: 1.7;
   color: #777;
 }
+
+.header {
+  height: 95vh; /* is the 96 % */
+  background-image: url(/Users/Davide/Dev/Natures/img/hero.jpg);
+  background-size: cover;
+}
