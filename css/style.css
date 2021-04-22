@@ -24,10 +24,22 @@ body {
 }
 
 .header {
-  height: 95vh; /* is the 96 % */
+  height: 95vh; /*  view height is the 96 % */
   background-image: linear-gradient(to right bottom, #7ed56fba, #28b485d2),
     url(/Users/Davide/Dev/Natures/img/hero.jpg);
   background-size: cover;
   background-position: top;
-  clip-path: polygon(x, y); /* create polygon, forms inside on the image */
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* create polygon, forms inside on the image - https://bennettfeely.com/clippy/ */
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px; /*  the reference is the position relative in the parent element (header) */
+  left: 40px;
+}
+
+.logo {
+  height: 35px;
 }
