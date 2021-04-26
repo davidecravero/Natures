@@ -25,7 +25,7 @@ body {
 
 .header {
   height: 95vh; /*  view height is the 96 % */
-  background-image: linear-gradient(to right bottom, #7ed56fba, #28b485d2),
+  background-image: linear-gradient(to right bottom, #7ed56fbb, #28b485e2),
     url(/Users/Davide/Dev/Natures/img/hero.jpg);
   background-size: cover;
   background-position: top;
@@ -57,6 +57,7 @@ body {
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+  backface-visibility: hidden;
 }
 
 .heading-primary-main {
@@ -64,6 +65,11 @@ body {
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
+  /* Keyframe animation properties */
+  animation-name: moveInLeft;
+  animation-duration: 2s;
+  /* animation-iteration-count: 2; */
+  animation-timing-function: ease-in;
 }
 
 .heading-primary-sub {
@@ -71,4 +77,52 @@ body {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 17.4px;
+  animation-name: moveInRight;
+  animation-duration: 2s;
+  /* animation-iteration-count: 2; */
+  animation-timing-function: ease-in;
+}
+/*  
+keyframes at-rule.
+*/
+@keyframes moveInLeft {
+  /*  
+those are the 3 phase of the animation
+*/
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); /*  
+Xdirection in negative value
+*/
+  }
+
+  80% {
+    transform: translate(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  /*  
+those are the 3 phase of the animation
+*/
+  0% {
+    opacity: 0;
+    transform: translateX(100px); /*  
+X direction in negative value
+*/
+  }
+
+  80% {
+    transform: translate(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
