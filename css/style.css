@@ -52,6 +52,8 @@ body {
     -50%,
     -50%
   ); /*  this property can reduce the 50% on x and on y so the box will result centred inside the box */
+
+  text-align: center; /*  this is for centering the botton */
 }
 
 .heading-primary {
@@ -125,4 +127,18 @@ X direction in negative value
     opacity: 1;
     transform: translate(0);
   }
+}
+
+.btn:link,
+.btn:visited
+/*  seudo Class, and already clicked link */ {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
 }
